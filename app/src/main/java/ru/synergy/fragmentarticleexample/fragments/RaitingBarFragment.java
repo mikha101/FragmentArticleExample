@@ -1,7 +1,5 @@
 package ru.synergy.fragmentarticleexample.fragments;
 
-import static android.icu.text.Normalizer.YES;
-
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -9,31 +7,26 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.RadioGroup;
-import android.widget.TextView;
 
 import ru.synergy.fragmentarticleexample.R;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link BlankFragment#newInstance} factory method to
+ * Use the {@link RaitingBarFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class BlankFragment extends Fragment {
+public class RaitingBarFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
-    private static final int YES = 0;
-    private static final int NO = 1;
-
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
 
-    public BlankFragment() {
+    public RaitingBarFragment() {
         // Required empty public constructor
     }
 
@@ -43,11 +36,11 @@ public class BlankFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment BlankFragment.
+     * @return A new instance of fragment RaitingBarFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static BlankFragment newInstance(String param1, String param2) {
-        BlankFragment fragment = new BlankFragment();
+    public static RaitingBarFragment newInstance(String param1, String param2) {
+        RaitingBarFragment fragment = new RaitingBarFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -68,28 +61,6 @@ public class BlankFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        final View rootView = inflater.inflate(R.layout.fragment_blank, container, false);
-        final RadioGroup radioGroup = rootView.findViewById(R.id.radio_group);
-
-        radioGroup.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(RadioGroup radioGroup, int checkedId) {
-                View radioButton = radioGroup.findViewById(checkedId);
-                int i = radioGroup.indexOfChild(radioButton);
-                TextView textView = rootView.findViewById(R.id.fragment_header);
-                switch (i){
-                    case YES:
-                        textView.setText(R.string.yes_massege);
-                        break;
-                    case NO:
-                        textView.setText(R.string.no_massege);
-                        break;
-                    default:
-                        break; //TODO
-                }
-            }
-        });
-
-        return rootView;
+        return inflater.inflate(R.layout.fragment_raiting_bar, container, false);
     }
 }
