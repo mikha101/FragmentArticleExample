@@ -28,15 +28,15 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="79dp"
+        android:layout_height="100dp"
         android:layout_marginLeft="@dimen/image_left_margin"
         android:layout_marginTop="150dp"
         android:scaleType="centerCrop"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
 
-        app:srcCompat = "@drawable/pes"/>
+        app:srcCompat="@drawable/pes" />
 
     <TextView
         android:id="@+id/title"
