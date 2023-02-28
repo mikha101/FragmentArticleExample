@@ -24,7 +24,9 @@
         app:layout_constraintEnd_toEndOf="@+id/fragment"
         app:layout_constraintStart_toStartOf="@+id/fragment"
         app:layout_constraintTop_toBottomOf="@+id/fragment"
-        tools:layout="@layout/fragment_raiting_bar"></fragment>
+        tools:layout="@layout/fragment_raiting_bar">
+
+    </fragment>
 
     <ImageView
         android:id="@+id/imageView"
